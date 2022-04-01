@@ -1,0 +1,64 @@
+$white-color: #f7f7f7;
+$light-gray:#ddd;
+$dark-gray:#626262;
+
+@mixin flexLayout($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+.form {
+    width: 55%;
+    margin: 50px auto;
+    border-radius: 5px;
+    background-color: $white-color;
+    padding: 16px 32px;
+    transition: all 1s;
+
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0 0 15px $light-gray;
+    }
+
+    .icon-box {
+        background-color: #fff;
+        border: 1px solid $light-gray;
+        text-align: center;
+        margin: 0 auto;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        color: #0068ac;
+
+        .icon {
+            margin-top: 16px;
+            margin-left: 8px;
+        }
+    }
+
+    h2 {
+        color: $dark-gray;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    hr {
+        margin: 20px 0;
+        border: 0;
+        border-top: 1px solid #eee;
+    }
+
+    p {
+        color: #666666;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 15px;
+    }
+   
+    .form-group {
+        @include flexLayout(column);
+    }
+}
